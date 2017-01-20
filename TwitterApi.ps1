@@ -6,9 +6,13 @@
     Version 0.0.1
 #>
 
+Find-module *twitter*
 
 #import the twitter API module after downloading it from the gallery
 Import-Module InvokeTwitterAPIs
+
+#Show twitter oath dev page
+Start-process https://dev.twitter.com/oauth
 
 
 #check it is there
@@ -28,4 +32,3 @@ $userdata.location
 #Test location of profile pic
 $url = $userdata.profile_image_url
 Start-Process $url
-

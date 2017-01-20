@@ -11,7 +11,7 @@ $fileObject = Get-ChildItem c:\GUIDemo
 $fileObject
 
 #show what that object is made from
-$fileObject | Get-Member
+$fileObject.GetType().name
 
 
 #show the directory property

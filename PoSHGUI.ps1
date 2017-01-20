@@ -15,13 +15,14 @@ $wpf = @{ }
 
 
 #Grab the content of the Visual Studio xaml file as a string
-$inputXML = Get-Content -Path 'C:\Users\Jim\Dropbox (Personal)\E2EVC\PoSH GUI\Source\GUIDemo\GUIDemo\MainWindow.xaml'
+$inputXML = Get-Content -Path "C:\GUIDemo\YouTube\YouTube\MainWindow.xaml"
 
 Clear-Host
 $inputXML
 
 Clear-Host
-$inputXML | Get-Member
+$firstItem = $inputXML | select-object -first 1
+$firstItem.gettype().Fullname
 
 
 #clean up xml there is syntax which Visual Studio 2015 creates which PoSH can't understand
@@ -35,7 +36,7 @@ $inputXMLClean
 [xml]$xaml = $inputXMLClean
 
 Clear-Host
-$xaml | Get-Member
+$xaml.GetType().Fullname
 
 			
 #read xml data into xaml node reader object
@@ -43,9 +44,11 @@ $reader = New-Object System.Xml.XmlNodeReader $xaml
 
 #create System.Windows.Window object
 $tempform = [Windows.Markup.XamlReader]::Load($reader)
+$tempform.GetType().Fullname
 
-#select each named node.
-$namedNodes = $xaml.SelectNodes("//*[@*[contains(translate(name(.),'n','N'),'Name')]]") 
+#select each named node using an Xpath expression.
+$namedNodes = $xaml.SelectNodes("//*[@*[contains(translate(name(.),'n','N'),'Name')]]")
+
 
 #add all the named nodes as members to the $wpf variable, this also adds in the correct type for the objects.
 $namedNodes | ForEach-Object {
@@ -54,22 +57,23 @@ $namedNodes | ForEach-Object {
 	
 }
 
+
 #show what's inside $wpf
+clear-Host
 $wpf
 
 Clear-Host
-$wpf.E2EVCButton
+$wpf.YouTubeButton.GetType().Fullname
 
 Clear-Host
-$wpf.E2EVCButton | Get-Member
+$wpf.YouTubeButton
 
 Clear-Host
-$buttonEvents = $wpf.E2EVCButton | Get-Member | Where-Object {$_.MemberType -eq 'Event'}
+$wpf.YouTubeButton.Content
+
+Clear-Host
+$buttonEvents = $wpf.YouTubeButton | Get-Member | Where-Object {$_.MemberType -eq 'Event'}
 $buttonEvents.count
 
 
-$wpf.Window.ShowDialog() | Out-Null
-
-
-
-
+$wpf.YouTubeWindow.ShowDialog() | Out-Null
