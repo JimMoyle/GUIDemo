@@ -62,7 +62,7 @@ function Get-XamlObject {
 }
 
 
-$path = 'E:\JimM\Dropbox\Dropbox (Personal)\ScriptScratch\YouTube\Basic Wizard\Basic Wizard'
+$path = 'E:\JimM\Dropbox\Dropbox (Personal)\ScriptScratch\YouTube\Ep3 CheckBoxesAndRadioButtons\CheckBoxesAndRadioButtons'
 
 $wpf = Get-ChildItem -Path $path -Filter *.xaml -file | Where-Object { $_.Name -ne 'App.xaml' } | Get-XamlObject
 
