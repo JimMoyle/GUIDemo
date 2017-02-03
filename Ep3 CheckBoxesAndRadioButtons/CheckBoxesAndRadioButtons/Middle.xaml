@@ -12,6 +12,8 @@
         <Button x:Name="MiddleButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
         <Button x:Name="MiddleButtonNext" Content="Next" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75"/>
         <Button x:Name="MiddleButtonBack" Content="Back" HorizontalAlignment="Right" Margin="0,0,170.333,10" VerticalAlignment="Bottom" Width="75"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,143,0,0" TextWrapping="Wrap" Text="Middle" VerticalAlignment="Top" FontSize="24"/>
+        <CheckBox x:Name="checkBox" Content="CPU" HorizontalAlignment="Left" Margin="156,78,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox1" Content="Memory" HorizontalAlignment="Left" Margin="156,124,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox2" Content="Disk" HorizontalAlignment="Left" Margin="156,171,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

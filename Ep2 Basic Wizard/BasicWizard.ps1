@@ -65,9 +65,12 @@ function Get-XamlObject
 	} #END
 }
 
+#region Blah
 $path = 'E:\JimM\Dropbox\Dropbox (Personal)\ScriptScratch\YouTube\Ep2 Basic Wizard\Basic Wizard'
 
 $wpf = Get-ChildItem -Path $path -Filter *.xaml -file | Where-Object { $_.Name -ne 'App.xaml' } | Get-XamlObject
+
+#endregion
 
 $wpf.WizardWindowFrame.NavigationService.Navigate($wpf.TitlePage) | Out-Null
 

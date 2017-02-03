@@ -11,6 +11,11 @@
     <Grid x:Name="TitlePage">
         <Button x:Name="TitleButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
         <Button x:Name="TitleButtonNext" Content="Next" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,143,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" FontSize="24"/>
+        <RadioButton x:Name="radioButton" Content="XenServer" HorizontalAlignment="Left" Margin="166,95,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold" IsChecked="True"/>
+        <RadioButton x:Name="radioButton1" Content="Hyper-V" HorizontalAlignment="Left" Margin="166,131,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="155,131,0,0" VerticalAlignment="Top" Width="100">
+            <RadioButton x:Name="radioButton3" Content="KVM" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold"/>
+            <RadioButton x:Name="radioButton2" Content="ESXi" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold"/>
+        </Grid>
     </Grid>
 </Page>

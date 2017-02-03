@@ -11,6 +11,9 @@
     <Grid x:Name="FinishPage">
         <Button x:Name="FinishButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
         <Button x:Name="FinishButtonBack" Content="Back" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,143,0,0" TextWrapping="Wrap" Text="Finish" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock x:Name="FinishTextBlockHypervisor" HorizontalAlignment="Left" Margin="133,58,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="71" Width="199" FontSize="36"/>
+        <TextBlock x:Name="FinishTextBlockCPU" HorizontalAlignment="Left" Margin="133,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock x:Name="FinishTextBlockMemory" HorizontalAlignment="Left" Margin="133,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock x:Name="FinishTextBlockDisk" HorizontalAlignment="Left" Margin="133,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
     </Grid>
 </Page>
