@@ -1,0 +1,51 @@
+﻿<Page x:Class="Basic_Wizard.Finish"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Basic_Wizard"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+      Title="Finish">
+
+    <Grid x:Name="FinishPage">
+        <Button x:Name="FinishButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
+        <Button x:Name="FinishButtonBack" Content="Back" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75"/>
+        <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="214,84,0,0" VerticalAlignment="Top" Width="128">
+            <StackPanel HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="124" Orientation="Horizontal" Margin="1.667,1.667,0,0">
+                <TextBox x:Name="textBoxManIPOct1" Width="24" MaxLength="3" BorderThickness="0" TextAlignment="Center"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManIPOct2" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManIPOct3" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManIPOct4" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+            </StackPanel>
+        </Border>
+        <TextBlock HorizontalAlignment="Left" Margin="92,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="IP Addre"/><Run Text="ss"/></TextBlock>
+        <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="214,111,0,0" VerticalAlignment="Top" Width="128">
+            <StackPanel HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="124" Orientation="Horizontal" Margin="1.667,1.667,0,0">
+                <TextBox x:Name="textBoxManMaskOct1" Width="24" MaxLength="3" BorderThickness="0" TextAlignment="Center"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManMaskOct2" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManMaskOct3" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManMaskOct4" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="214,138,0,0" VerticalAlignment="Top" Width="128">
+            <StackPanel HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="124" Orientation="Horizontal" Margin="1.667,1.667,0,0">
+                <TextBox x:Name="textBoxManGWOct1" Width="24" MaxLength="3" BorderThickness="0" TextAlignment="Center"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManGWOct2" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManGWOct3" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+                <TextBox TextAlignment="Center" Text="." Width="9" Focusable="False" AllowDrop="False" IsTabStop="False" IsReadOnly="True" BorderThickness="0"/>
+                <TextBox x:Name="textBoxManGWOct4" TextAlignment="Center" Width="24" MaxLength="3" BorderThickness="0"/>
+            </StackPanel>
+        </Border>
+        <TextBlock HorizontalAlignment="Left" Margin="92,114,0,0" TextWrapping="Wrap" Text="Subnet" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Gateway" VerticalAlignment="Top" Margin="92,141,0,0"/>
+    </Grid>
+</Page>

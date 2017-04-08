@@ -1,0 +1,19 @@
+﻿<Page x:Class="Basic_Wizard.Middle"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Basic_Wizard"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+      Title="Middle">
+
+    <Grid x:Name="MiddlePage">
+        <Button x:Name="MiddleButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
+        <Button x:Name="MiddleButtonNext" Content="Next" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75" IsEnabled="False"/>
+        <Button x:Name="MiddleButtonBack" Content="Back" HorizontalAlignment="Right" Margin="0,0,170.333,10" VerticalAlignment="Bottom" Width="75"/>
+        <CheckBox x:Name="checkBoxCPU" Content="CPU" HorizontalAlignment="Left" Margin="156,78,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBoxMemory" Content="Memory" HorizontalAlignment="Left" Margin="156,124,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBoxDisk" Content="Disk" HorizontalAlignment="Left" Margin="156,171,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

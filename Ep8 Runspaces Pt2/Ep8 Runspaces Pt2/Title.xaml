@@ -1,0 +1,28 @@
+﻿<Page x:Class="Basic_Wizard.Title"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Basic_Wizard"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+      Title="Title">
+
+    <Grid x:Name="TitlePage" Width="525">
+        <Button x:Name="TitleButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
+        <Button x:Name="TitleButtonNext" Content="Next" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75"/>
+        <Button x:Name="titleDispatcherButton" Content="Run Dispatcher " HorizontalAlignment="Left" Margin="285,89,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="23" Margin="112,89,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="titleResultTextBlock" HorizontalAlignment="Left" Margin="112,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="95,55,0,0" TextWrapping="Wrap" Text="Number of times to run Loop" VerticalAlignment="Top"/>
+        <Button x:Name="titleTimerButton" Content="Run Timer" HorizontalAlignment="Left" Margin="398,89,0,0" VerticalAlignment="Top" Width="91" Height="23" Cursor=""/>
+        <StackPanel HorizontalAlignment="Left" Height="34" Margin="57,206,0,0" VerticalAlignment="Top" Width="432" Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Width="154" FontSize="18"><Run Text="Dispatcher "/><Run Text="Result"/><Run Text=":"/></TextBlock>
+            <TextBlock x:Name="titleDispatcherTextBlock" TextWrapping="Wrap" Width="278" FontSize="18"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="34" Margin="57,240,0,0" VerticalAlignment="Top" Width="432" Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Timer Result:" Width="155" FontSize="18"/>
+            <TextBlock x:Name="titleTimerTextBlock" TextWrapping="Wrap" Width="277" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</Page>

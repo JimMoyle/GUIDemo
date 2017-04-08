@@ -1,0 +1,22 @@
+﻿<Page x:Class="Basic_Wizard.Title"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Basic_Wizard"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+      Title="Title">
+
+    <Grid x:Name="TitlePage">
+        <Button x:Name="TitleButtonCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,10" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
+        <Button x:Name="TitleButtonNext" Content="Next" HorizontalAlignment="Right" Margin="0,0,90.333,10" VerticalAlignment="Bottom" Width="75" IsEnabled="False"/>
+        <RadioButton x:Name="radioButton" Content="XenServer" HorizontalAlignment="Left" Margin="166,63,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold" IsChecked="True"/>
+        <RadioButton x:Name="radioButton1" Content="Hyper-V" HorizontalAlignment="Left" Margin="166,84,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold"/>
+
+        <RadioButton x:Name="radioButton3" Content="KVM" HorizontalAlignment="Left" Margin="166,104,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold"/>
+        <RadioButton x:Name="radioButton2" Content="ESXi" HorizontalAlignment="Left" Margin="166,124,0,0" VerticalAlignment="Top" GroupName="1" FontWeight="Bold"/>
+        <CheckBox x:Name="TitleCheckBox" Content="Enable" HorizontalAlignment="Left" Margin="166,195,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
