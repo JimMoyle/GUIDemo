@@ -1,8 +1,8 @@
 <#
-.NOTES 
+.NOTES
    Author      : Jim Moyle @jimmoyle
    GitHub      : https://github.com/JimMoyle/GUIDemo
-	
+
     Version 0.0.1
 #>
 
@@ -15,7 +15,7 @@ $wpf = @{ }
 
 
 #Grab the content of the Visual Studio xaml file as a string
-$inputXML = Get-Content -Path "C:\GUIDemo\YouTube\YouTube\MainWindow.xaml"
+$inputXML = Get-Content -Path ".\WPFGUIinTenLines\MainWindow.xaml"
 
 Clear-Host
 $inputXML
@@ -31,14 +31,14 @@ $inputXMLClean = $inputXML -replace 'mc:Ignorable="d"','' -replace "x:N",'N' -re
 Clear-Host
 $inputXMLClean
 
-			
+
 #change string variable into xml
 [xml]$xaml = $inputXMLClean
 
 Clear-Host
 $xaml.GetType().Fullname
 
-			
+
 #read xml data into xaml node reader object
 $reader = New-Object System.Xml.XmlNodeReader $xaml
 
@@ -52,9 +52,9 @@ $namedNodes = $xaml.SelectNodes("//*[@*[contains(translate(name(.),'n','N'),'Nam
 
 #add all the named nodes as members to the $wpf variable, this also adds in the correct type for the objects.
 $namedNodes | ForEach-Object {
-	
+
 	$wpf.Add($_.Name, $tempform.FindName($_.Name))
-	
+
 }
 
 
